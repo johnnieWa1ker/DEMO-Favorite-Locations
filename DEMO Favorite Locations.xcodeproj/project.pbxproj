@@ -151,6 +151,7 @@
 		7981749224D4AEE2001C8EA1 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		7981749324D4AEE2001C8EA1 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		7981749424D4AEE2001C8EA1 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		7981749B24D4B723001C8EA1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		94EBE1C1855E14772C99BEAC /* Pods-DEMO Favorite Locations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO Favorite Locations.debug.xcconfig"; path = "Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations.debug.xcconfig"; sourceTree = "<group>"; };
 		AE332B5A21EBECC0816EA41F /* Pods-DEMO Favorite Locations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO Favorite Locations.release.xcconfig"; path = "Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +206,7 @@
 				7981737824D2D4B1001C8EA1 /* 🧩 Domain Layer */,
 				7981737A24D2D4B1001C8EA1 /* 🌟 Presentation Layer */,
 				7981739B24D2D4B1001C8EA1 /* 🤖 Service Layer */,
+				7981749B24D4B723001C8EA1 /* README.md */,
 			);
 			path = "DEMO Favorite Locations";
 			sourceTree = "<group>";
