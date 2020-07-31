@@ -1,4 +1,4 @@
-# 🌁 Favorite Location
+# 📍 Favorite Location
 
 Demo application based on TableView and MapView.
 In it, I want to focus on using MapKit and working with the Realm database.

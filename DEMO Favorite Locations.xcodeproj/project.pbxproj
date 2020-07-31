@@ -74,7 +74,7 @@
 		7981749824D4AEE2001C8EA1 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981749224D4AEE2001C8EA1 /* MapRouter.swift */; };
 		7981749924D4AEE2001C8EA1 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7981749324D4AEE2001C8EA1 /* MapViewController.xib */; };
 		7981749A24D4AEE2001C8EA1 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981749424D4AEE2001C8EA1 /* MapPresenter.swift */; };
-		7981749C24D4BBDD001C8EA1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7981749B24D4B723001C8EA1 /* README.md */; };
+		7981749E24D4BD0E001C8EA1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7981749D24D4BD0E001C8EA1 /* README.md */; };
 		E90D0AC12D5AA476DF989B05 /* Pods_DEMO_Favorite_Locations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAFA0190EB5712B88228256 /* Pods_DEMO_Favorite_Locations.framework */; };
 /* End PBXBuildFile section */
 
@@ -152,7 +152,7 @@
 		7981749224D4AEE2001C8EA1 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		7981749324D4AEE2001C8EA1 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		7981749424D4AEE2001C8EA1 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
-		7981749B24D4B723001C8EA1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7981749D24D4BD0E001C8EA1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		94EBE1C1855E14772C99BEAC /* Pods-DEMO Favorite Locations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO Favorite Locations.debug.xcconfig"; path = "Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations.debug.xcconfig"; sourceTree = "<group>"; };
 		AE332B5A21EBECC0816EA41F /* Pods-DEMO Favorite Locations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO Favorite Locations.release.xcconfig"; path = "Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,16 +198,16 @@
 		7981732424D2D4B1001C8EA1 /* DEMO Favorite Locations */ = {
 			isa = PBXGroup;
 			children = (
-				7981732524D2D4B1001C8EA1 /* Podfile */,
-				7981732724D2D4B1001C8EA1 /* .swiftlint.yml */,
-				7981732924D2D4B1001C8EA1 /* .gitignore */,
-				798173B224D2D4B1001C8EA1 /* Info.plist */,
 				7981732B24D2D4B1001C8EA1 /* 👑 Application Layer */,
 				7981737624D2D4B1001C8EA1 /* 🧠 Data Layer */,
 				7981737824D2D4B1001C8EA1 /* 🧩 Domain Layer */,
 				7981737A24D2D4B1001C8EA1 /* 🌟 Presentation Layer */,
 				7981739B24D2D4B1001C8EA1 /* 🤖 Service Layer */,
-				7981749B24D4B723001C8EA1 /* README.md */,
+				7981732524D2D4B1001C8EA1 /* Podfile */,
+				7981732724D2D4B1001C8EA1 /* .swiftlint.yml */,
+				7981732924D2D4B1001C8EA1 /* .gitignore */,
+				798173B224D2D4B1001C8EA1 /* Info.plist */,
+				7981749D24D4BD0E001C8EA1 /* README.md */,
 			);
 			path = "DEMO Favorite Locations";
 			sourceTree = "<group>";
@@ -582,12 +582,12 @@
 				7981749924D4AEE2001C8EA1 /* MapViewController.xib in Resources */,
 				7981734124D2D4B1001C8EA1 /* LaunchScreen.storyboard in Resources */,
 				7981738624D2D4B1001C8EA1 /* DisconnectView.xib in Resources */,
+				7981749E24D4BD0E001C8EA1 /* README.md in Resources */,
 				7981732A24D2D4B1001C8EA1 /* .gitignore in Resources */,
 				7981735624D2D4B1001C8EA1 /* SF-Pro-Display-Bold.otf in Resources */,
 				7981735A24D2D4B1001C8EA1 /* SF-Pro-Display-Medium.otf in Resources */,
 				7981739824D2D4B1001C8EA1 /* InitialViewController.xib in Resources */,
 				7981735E24D2D4B1001C8EA1 /* SF-Pro-Display-Light.otf in Resources */,
-				7981749C24D4BBDD001C8EA1 /* README.md in Resources */,
 				7981735224D2D4B1001C8EA1 /* Assets.xcassets in Resources */,
 				7981747F24D4A9CB001C8EA1 /* PlaceCell.xib in Resources */,
 				7981748B24D4AA03001C8EA1 /* PlacesViewController.xib in Resources */,
