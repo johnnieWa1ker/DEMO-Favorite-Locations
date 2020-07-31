@@ -46,7 +46,7 @@ class InitialViewController: ViperViewController, InitialViewInput {
     func setupActions() { }
     
     func applyStyles() {
-        self.view.apply(.standart())
+        self.view.apply(.asBackground())
     }
     
     // MARK: - InitialViewInput
