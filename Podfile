@@ -22,5 +22,8 @@ target 'DEMO Favorite Locations' do
   
   # https://github.com/huri000/SwiftEntryKit
   pod 'SwiftEntryKit'
+  
+  # https://github.com/onevcat/Kingfisher
+  pod 'Kingfisher'
 
 end

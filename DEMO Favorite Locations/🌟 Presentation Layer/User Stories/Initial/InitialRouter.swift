@@ -24,12 +24,23 @@ class InitialRouter: ViperRouter, InitialRouterInput {
     
     // MARK: - InitialRouterInput
     func presentMainViewController() {
-//        let vc = MainAssembly.create()
-//        _ = MainAssembly.configure(with: vc)
-//
-//        vc.modalPresentationStyle = .fullScreen
-//
-//        self.present(vc, animated: false)
+        let placesVC = PlacesAssembly.create()
+        _ = PlacesAssembly.configure(with: placesVC)
+        let mapVC = MapAssembly.create()
+        _ = MapAssembly.configure(with: mapVC)
+        
+        let placesBarItem = UITabBarItem(title: "Places", image: UIImage(systemName: "star.fill"), selectedImage: nil)
+        let mapBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), selectedImage: nil)
+        
+        placesVC.tabBarItem = placesBarItem
+        mapVC.tabBarItem = mapBarItem
+        
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers([placesVC, mapVC], animated: true)
+        
+        tabBarController.modalPresentationStyle = .fullScreen
+
+        self.present(tabBarController, animated: false)
     }
     
     // MARK: - Module functions

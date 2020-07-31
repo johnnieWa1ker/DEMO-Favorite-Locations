@@ -14,7 +14,7 @@ extension StyleWrapper where Element: UIButton {
     /// Button with rounded corners. The background matches the main color theme of the application.
     static func accent() -> StyleWrapper {
         let wrap = StyleWrapper.wrap { button in
-            button.backgroundColor = AppTheme.radicalRed
+            button.backgroundColor = AppTheme.blue
             button.setTitleColor(AppTheme.white, for: .normal)
             button.titleLabel?.font = SFPRO.medium.font(size: 18.0)
             button.layer.cornerRadius = 10.0

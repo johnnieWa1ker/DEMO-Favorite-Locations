@@ -64,7 +64,7 @@ class DisconnectView: UIView {
 
     private func applyStyle() {
         self.titleLabel.apply(.sfTitle2Bold24(AppTheme.black, .center))
-        self.reloadButton.apply(.largeAccent())
+        self.reloadButton.apply(.accent())
     }
     
     // MARK: - Actions
