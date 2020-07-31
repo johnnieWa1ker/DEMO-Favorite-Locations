@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -61,11 +61,13 @@
 		798173AD24D2D4B1001C8EA1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798173AC24D2D4B1001C8EA1 /* HTTPMethod.swift */; };
 		798173AF24D2D4B1001C8EA1 /* RemoteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798173AE24D2D4B1001C8EA1 /* RemoteFactory.swift */; };
 		798173B124D2D4B1001C8EA1 /* RemoteUploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798173B024D2D4B1001C8EA1 /* RemoteUploadModel.swift */; };
+		E90D0AC12D5AA476DF989B05 /* Pods_DEMO_Favorite_Locations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAFA0190EB5712B88228256 /* Pods_DEMO_Favorite_Locations.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6CAFA0190EB5712B88228256 /* Pods_DEMO_Favorite_Locations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DEMO_Favorite_Locations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7981732224D2D4B1001C8EA1 /* DEMO Favorite Locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMO Favorite Locations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7981732524D2D4B1001C8EA1 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		7981732524D2D4B1001C8EA1 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7981732724D2D4B1001C8EA1 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
 		7981732924D2D4B1001C8EA1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		7981732C24D2D4B1001C8EA1 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
@@ -124,6 +126,8 @@
 		798173AE24D2D4B1001C8EA1 /* RemoteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFactory.swift; sourceTree = "<group>"; };
 		798173B024D2D4B1001C8EA1 /* RemoteUploadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUploadModel.swift; sourceTree = "<group>"; };
 		798173B224D2D4B1001C8EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94EBE1C1855E14772C99BEAC /* Pods-DEMO Favorite Locations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO Favorite Locations.debug.xcconfig"; path = "Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations.debug.xcconfig"; sourceTree = "<group>"; };
+		AE332B5A21EBECC0816EA41F /* Pods-DEMO Favorite Locations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DEMO Favorite Locations.release.xcconfig"; path = "Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,17 +135,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90D0AC12D5AA476DF989B05 /* Pods_DEMO_Favorite_Locations.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04425518FE1C7CB49519B89A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CAFA0190EB5712B88228256 /* Pods_DEMO_Favorite_Locations.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7981731824D2D4B1001C8EA1 = {
 			isa = PBXGroup;
 			children = (
 				7981732424D2D4B1001C8EA1 /* DEMO Favorite Locations */,
 				7981732324D2D4B1001C8EA1 /* Products */,
+				8E9F84FB8A794D697BD3D6EA /* Pods */,
+				04425518FE1C7CB49519B89A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -434,6 +449,15 @@
 			path = "Remote Factory";
 			sourceTree = "<group>";
 		};
+		8E9F84FB8A794D697BD3D6EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94EBE1C1855E14772C99BEAC /* Pods-DEMO Favorite Locations.debug.xcconfig */,
+				AE332B5A21EBECC0816EA41F /* Pods-DEMO Favorite Locations.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -441,10 +465,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 798173B524D2D4B1001C8EA1 /* Build configuration list for PBXNativeTarget "DEMO Favorite Locations" */;
 			buildPhases = (
+				01B9AC58AFBDE1C23A64D725 /* [CP] Check Pods Manifest.lock */,
 				7981731D24D2D4B1001C8EA1 /* Sources */,
 				7981731E24D2D4B1001C8EA1 /* Frameworks */,
 				7981731F24D2D4B1001C8EA1 /* Resources */,
 				7981732024D2D4B1001C8EA1 /* Swift Lint */,
+				317618614BFCD1185CD9B028 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,6 +539,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01B9AC58AFBDE1C23A64D725 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DEMO Favorite Locations-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		317618614BFCD1185CD9B028 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DEMO Favorite Locations/Pods-DEMO Favorite Locations-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7981732024D2D4B1001C8EA1 /* Swift Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -721,6 +786,7 @@
 		};
 		798173B624D2D4B1001C8EA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94EBE1C1855E14772C99BEAC /* Pods-DEMO Favorite Locations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -738,6 +804,7 @@
 		};
 		798173B724D2D4B1001C8EA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE332B5A21EBECC0816EA41F /* Pods-DEMO Favorite Locations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

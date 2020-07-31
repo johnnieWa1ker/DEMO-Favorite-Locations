@@ -3,11 +3,11 @@ platform :ios, '11.0'
 
 inhibit_all_warnings!
 
-target 'Temp' do
+target 'DEMO Favorite Locations' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Temp
+  # Pods for DEMO Favorite Locations
   
   # https://github.com/GrumpyKir
   pod 'GKViper', '~> 1.0.0'
