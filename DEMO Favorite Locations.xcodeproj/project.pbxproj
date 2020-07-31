@@ -74,6 +74,7 @@
 		7981749824D4AEE2001C8EA1 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981749224D4AEE2001C8EA1 /* MapRouter.swift */; };
 		7981749924D4AEE2001C8EA1 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7981749324D4AEE2001C8EA1 /* MapViewController.xib */; };
 		7981749A24D4AEE2001C8EA1 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7981749424D4AEE2001C8EA1 /* MapPresenter.swift */; };
+		7981749C24D4BBDD001C8EA1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7981749B24D4B723001C8EA1 /* README.md */; };
 		E90D0AC12D5AA476DF989B05 /* Pods_DEMO_Favorite_Locations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAFA0190EB5712B88228256 /* Pods_DEMO_Favorite_Locations.framework */; };
 /* End PBXBuildFile section */
 
@@ -586,6 +587,7 @@
 				7981735A24D2D4B1001C8EA1 /* SF-Pro-Display-Medium.otf in Resources */,
 				7981739824D2D4B1001C8EA1 /* InitialViewController.xib in Resources */,
 				7981735E24D2D4B1001C8EA1 /* SF-Pro-Display-Light.otf in Resources */,
+				7981749C24D4BBDD001C8EA1 /* README.md in Resources */,
 				7981735224D2D4B1001C8EA1 /* Assets.xcassets in Resources */,
 				7981747F24D4A9CB001C8EA1 /* PlaceCell.xib in Resources */,
 				7981748B24D4AA03001C8EA1 /* PlacesViewController.xib in Resources */,
