@@ -48,7 +48,7 @@ class PlacesPresenter: ViperPresenter, PlacesPresenterInput, PlacesViewOutput {
         let mainSection = TableSectionModel()
         
         for place in self.viewModel.places {
-            let cellModel = PlaceCellModel()
+            let cellModel = PlaceCellModel(place: place)
             mainSection.rows.append(cellModel)
         }
         

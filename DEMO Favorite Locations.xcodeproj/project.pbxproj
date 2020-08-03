@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79059F1B24D8432A003567C0 /* StarRatingStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79059F1824D8432A003567C0 /* StarRatingStackView.xib */; };
+		79059F1C24D8432A003567C0 /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79059F1924D8432A003567C0 /* StarRatingStackView.swift */; };
+		79059F1D24D8432A003567C0 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79059F1A24D8432A003567C0 /* StarRatingView.swift */; };
+		79714CFF24D88B9500304D8C /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79714CFE24D88B9500304D8C /* PlaceModel.swift */; };
 		7981732624D2D4B1001C8EA1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7981732524D2D4B1001C8EA1 /* Podfile */; };
 		7981732824D2D4B1001C8EA1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7981732724D2D4B1001C8EA1 /* .swiftlint.yml */; };
 		7981732A24D2D4B1001C8EA1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7981732924D2D4B1001C8EA1 /* .gitignore */; };
@@ -80,6 +84,10 @@
 
 /* Begin PBXFileReference section */
 		6CAFA0190EB5712B88228256 /* Pods_DEMO_Favorite_Locations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DEMO_Favorite_Locations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79059F1824D8432A003567C0 /* StarRatingStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarRatingStackView.xib; sourceTree = "<group>"; };
+		79059F1924D8432A003567C0 /* StarRatingStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingStackView.swift; sourceTree = "<group>"; };
+		79059F1A24D8432A003567C0 /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		79714CFE24D88B9500304D8C /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		7981732224D2D4B1001C8EA1 /* DEMO Favorite Locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMO Favorite Locations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7981732524D2D4B1001C8EA1 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7981732724D2D4B1001C8EA1 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
@@ -117,7 +125,6 @@
 		7981737224D2D4B1001C8EA1 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		7981737424D2D4B1001C8EA1 /* AppThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeManager.swift; sourceTree = "<group>"; };
 		7981737724D2D4B1001C8EA1 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		7981737924D2D4B1001C8EA1 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7981737D24D2D4B1001C8EA1 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		7981738324D2D4B1001C8EA1 /* DisconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectView.swift; sourceTree = "<group>"; };
 		7981738524D2D4B1001C8EA1 /* DisconnectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisconnectView.xib; sourceTree = "<group>"; };
@@ -175,6 +182,42 @@
 				6CAFA0190EB5712B88228256 /* Pods_DEMO_Favorite_Locations.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79059F1624D83E41003567C0 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				7981747B24D4A9CB001C8EA1 /* PlaceCell.swift */,
+				7981747C24D4A9CB001C8EA1 /* PlaceCell.xib */,
+				7981747A24D4A9CB001C8EA1 /* PlaceCellModel.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		79059F1724D8432A003567C0 /* StartRating */ = {
+			isa = PBXGroup;
+			children = (
+				79059F1924D8432A003567C0 /* StarRatingStackView.swift */,
+				79059F1824D8432A003567C0 /* StarRatingStackView.xib */,
+				79059F1A24D8432A003567C0 /* StarRatingView.swift */,
+			);
+			path = StartRating;
+			sourceTree = "<group>";
+		};
+		79714D0024D88BA900304D8C /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				79714D0124D88BB200304D8C /* Models */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		79714D0124D88BB200304D8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79714CFE24D88B9500304D8C /* PlaceModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7981731824D2D4B1001C8EA1 = {
@@ -333,7 +376,7 @@
 		7981737824D2D4B1001C8EA1 /* 🧩 Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
-				7981737924D2D4B1001C8EA1 /* .gitkeep */,
+				79714D0024D88BA900304D8C /* Place */,
 			);
 			path = "🧩 Domain Layer";
 			sourceTree = "<group>";
@@ -361,6 +404,7 @@
 		7981737C24D2D4B1001C8EA1 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				79059F1724D8432A003567C0 /* StartRating */,
 				7981737D24D2D4B1001C8EA1 /* Loader.swift */,
 			);
 			path = Custom;
@@ -369,9 +413,7 @@
 		7981737F24D2D4B1001C8EA1 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
-				7981747A24D4A9CB001C8EA1 /* PlaceCellModel.swift */,
-				7981747B24D4A9CB001C8EA1 /* PlaceCell.swift */,
-				7981747C24D4A9CB001C8EA1 /* PlaceCell.xib */,
+				79059F1624D83E41003567C0 /* Place */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -576,6 +618,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79059F1B24D8432A003567C0 /* StarRatingStackView.xib in Resources */,
 				7981735824D2D4B1001C8EA1 /* SF-Pro-Display-Semibold.otf in Resources */,
 				7981734524D2D4B1001C8EA1 /* Localizable.strings in Resources */,
 				7981732824D2D4B1001C8EA1 /* .swiftlint.yml in Resources */,
@@ -667,6 +710,7 @@
 				7981737524D2D4B1001C8EA1 /* AppThemeManager.swift in Sources */,
 				7981737324D2D4B1001C8EA1 /* AppTheme.swift in Sources */,
 				7981739624D2D4B1001C8EA1 /* InitialViewController.swift in Sources */,
+				79059F1C24D8432A003567C0 /* StarRatingStackView.swift in Sources */,
 				7981736E24D2D4B1001C8EA1 /* StyleWrapper+UITextField.swift in Sources */,
 				7981736824D2D4B1001C8EA1 /* StyleWrapper+UIButton.swift in Sources */,
 				7981734C24D2D4B1001C8EA1 /* AppLocalizationManager.swift in Sources */,
@@ -683,6 +727,7 @@
 				7981748924D4AA03001C8EA1 /* PlacesAssembly.swift in Sources */,
 				7981738A24D2D4B1001C8EA1 /* BasicNavigationController.swift in Sources */,
 				798173A024D2D4B1001C8EA1 /* NoticeParam.swift in Sources */,
+				79059F1D24D8432A003567C0 /* StarRatingView.swift in Sources */,
 				7981736A24D2D4B1001C8EA1 /* StyleWrapper+UILabel.swift in Sources */,
 				7981748A24D4AA03001C8EA1 /* PlacesRouter.swift in Sources */,
 				7981749A24D4AEE2001C8EA1 /* MapPresenter.swift in Sources */,
@@ -704,6 +749,7 @@
 				7981747D24D4A9CB001C8EA1 /* PlaceCellModel.swift in Sources */,
 				7981732F24D2D4B1001C8EA1 /* AppDefaults.swift in Sources */,
 				7981749524D4AEE2001C8EA1 /* MapViewModel.swift in Sources */,
+				79714CFF24D88B9500304D8C /* PlaceModel.swift in Sources */,
 				7981738424D2D4B1001C8EA1 /* DisconnectView.swift in Sources */,
 				7981733C24D2D4B1001C8EA1 /* ViperPresenter.swift in Sources */,
 				7981736C24D2D4B1001C8EA1 /* StyleWrapper+UITableView.swift in Sources */,
@@ -796,7 +842,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -849,7 +895,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
-				SWIFT_VERSION = 5.1;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

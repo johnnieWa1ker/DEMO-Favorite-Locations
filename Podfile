@@ -25,5 +25,8 @@ target 'DEMO Favorite Locations' do
   
   # https://github.com/onevcat/Kingfisher
   pod 'Kingfisher'
+  
+  # https://github.com/layoutBox/PinLayout
+  pod 'PinLayout'
 
 end

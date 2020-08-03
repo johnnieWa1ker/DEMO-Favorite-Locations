@@ -16,6 +16,7 @@ PODS:
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
+  - PinLayout (1.8.13)
   - QuickLayout (3.0.0)
   - SVProgressHUD (2.2.5)
   - SwiftEntryKit (1.2.3):
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - GKViper (~> 1.0.0)
   - IQKeyboardManagerSwift
   - Kingfisher
+  - PinLayout
   - SVProgressHUD
   - SwiftEntryKit
 
@@ -40,6 +42,7 @@ SPEC REPOS:
     - GKViper
     - IQKeyboardManagerSwift
     - Kingfisher
+    - PinLayout
     - QuickLayout
     - SVProgressHUD
     - SwiftEntryKit
@@ -53,10 +56,11 @@ SPEC CHECKSUMS:
   GKViper: 1ffe86f32753c4fc834c1325ee1892806c9ff1aa
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  PinLayout: e41a50260a76508b7a7fcee8955c76639adc69bc
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
 
-PODFILE CHECKSUM: 92b375432962d26261e9fe47b393078dc6dbae1f
+PODFILE CHECKSUM: fd16763fb2f6fdff9d0584cda44f2ddec60355f8
 
 COCOAPODS: 1.9.3
