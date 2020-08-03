@@ -11,7 +11,13 @@ import GKViper
 class PlacesViewModel: ViperViewModel {
     
     // MARK: - Props
-    var places: [PlaceCellModel] = [PlaceCellModel(), PlaceCellModel(), PlaceCellModel(), PlaceCellModel()]
+    var places: [PlaceModel] {
+        var places: [PlaceModel] = []
+        for place in 1...5 {
+            places.append(PlaceModel(id: place, title: "Place #\(place)", description: "This is place #\(place)", rating: Double.random(in: 0.0...5.0), cover: AppAssets.placePlaceholder))
+        }
+        return places
+    }
     
     // MARK: - Initialization
 }

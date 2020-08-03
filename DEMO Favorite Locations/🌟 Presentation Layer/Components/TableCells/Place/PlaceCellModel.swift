@@ -23,7 +23,10 @@ class PlaceCellModel: TableCellModel {
     }
     
     // MARK: - Props
+    let place: PlaceModel
     
     // MARK: - Initialization
-//    init() { }
+    init(place: PlaceModel) {
+        self.place = place
+    }
 }

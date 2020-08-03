@@ -39,6 +39,10 @@ enum AppAssets {
     // MARK: - Logos
     
     // MARK: - Placeholders
+    static var placePlaceholder: UIImage? {
+        let img = UIImage(named: "placePlaceholder")
+        return img
+    }
     
     // Image for temporary placement on those screens that have not yet been developed
     static var wipPlaceholder: UIImage? {
