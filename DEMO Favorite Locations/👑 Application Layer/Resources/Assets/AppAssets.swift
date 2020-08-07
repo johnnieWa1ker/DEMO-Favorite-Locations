@@ -28,12 +28,17 @@ enum AppAssets {
     }
     
     // MARK: - Buttons
-    static var photoAdd: UIImage? {
-        let img = UIImage(named: "photoAdd")
+    
+    // MARK: - Icons
+    static var iconAddImage: UIImage? {
+        let img = UIImage(named: "iconAddImage")
         return img
     }
     
-    // MARK: - Icons
+    static var iconBack: UIImage? {
+        let img = UIImage(named: "iconBack")
+        return img
+    }
     
     static var iconDisconnect: UIImage? {
         let img = UIImage(named: "iconDisconnect")

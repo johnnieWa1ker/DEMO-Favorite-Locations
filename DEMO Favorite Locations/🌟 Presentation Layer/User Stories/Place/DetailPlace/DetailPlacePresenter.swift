@@ -30,8 +30,8 @@ class DetailPlacePresenter: ViperPresenter, DetailPlacePresenterInput, DetailPla
     var viewModel: DetailPlaceViewModel
     
     // MARK: - Initialization
-    override init() {
-        self.viewModel = DetailPlaceViewModel()
+    init(place: PlaceModel) {
+        self.viewModel = DetailPlaceViewModel(place: place)
     }
     
     // MARK: - DetailPlacePresenterInput

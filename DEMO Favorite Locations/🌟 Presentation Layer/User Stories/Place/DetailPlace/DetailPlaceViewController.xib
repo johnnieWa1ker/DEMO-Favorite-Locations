@@ -9,11 +9,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailPlaceViewController" customModule="DEMO_Favorite_Locations" customModuleProvider="target">
             <connections>
-                <outlet property="addButton" destination="dle-6d-K3X" id="8f0-oL-gvW"/>
+                <outlet property="addImageButton" destination="dle-6d-K3X" id="8f0-oL-gvW"/>
+                <outlet property="cancelButton" destination="KI2-Sp-uEU" id="iy1-oh-cAD"/>
                 <outlet property="coverBackgroundView" destination="izc-wK-zdG" id="HJO-QH-b0W"/>
                 <outlet property="coverImageView" destination="ulv-DI-VlA" id="bYz-qU-U2G"/>
                 <outlet property="descriptionLabel" destination="6aj-0m-YRH" id="XTv-oK-2Yj"/>
                 <outlet property="descriptionTextField" destination="gZn-Pf-FK5" id="Rgw-0v-P4G"/>
+                <outlet property="saveButton" destination="yGO-WS-0iC" id="4ZY-aS-fTn"/>
                 <outlet property="titleLabel" destination="xol-RF-HFf" id="H8b-Qp-hzT"/>
                 <outlet property="titleTextField" destination="dRM-qA-f1a" id="apt-bS-UYP"/>
                 <outlet property="typeLabel" destination="LcK-Yj-ClU" id="iih-8m-9s0"/>
@@ -90,7 +92,7 @@
                         </textField>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dle-6d-K3X" userLabel="Add Button">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dle-6d-K3X" userLabel="Add Image Button">
                     <rect key="frame" x="295" y="332" width="64" height="64"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -101,11 +103,32 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Xl1-5n-fxy" userLabel="Actions Stack View">
+                    <rect key="frame" x="16" y="714" width="343" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI2-Sp-uEU" userLabel="Cancel Button">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="KI2-Sp-uEU" secondAttribute="height" multiplier="1:1" id="kJU-9M-lrY"/>
+                                <constraint firstAttribute="height" constant="48" id="zoe-Ay-zYt"/>
+                            </constraints>
+                            <state key="normal" title="cancelButton"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGO-WS-0iC" userLabel="Save Button">
+                            <rect key="frame" x="64" y="0.0" width="279" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="bwQ-N1-VIf"/>
+                            </constraints>
+                            <state key="normal" title="saveButton"/>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ulv-DI-VlA" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="3DH-z5-7KX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lt7-mb-jdh" secondAttribute="trailing" constant="16" id="3pP-LH-jSL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xl1-5n-fxy" secondAttribute="trailing" constant="16" id="6fT-7D-h75"/>
                 <constraint firstAttribute="top" secondItem="izc-wK-zdG" secondAttribute="top" id="CGA-HU-22a"/>
                 <constraint firstItem="izc-wK-zdG" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="ELp-Zo-Avt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dle-6d-K3X" secondAttribute="trailing" constant="16" id="Esh-JU-eWB"/>
@@ -122,7 +145,9 @@
                 <constraint firstItem="lt7-mb-jdh" firstAttribute="top" secondItem="ulv-DI-VlA" secondAttribute="bottom" constant="24" id="jiN-yb-1Au"/>
                 <constraint firstItem="dle-6d-K3X" firstAttribute="top" secondItem="ulv-DI-VlA" secondAttribute="bottom" constant="-35" id="kZY-dg-ELe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="izc-wK-zdG" secondAttribute="trailing" id="lPp-aw-6Ve"/>
+                <constraint firstItem="Xl1-5n-fxy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="nSx-tU-aaY"/>
                 <constraint firstItem="FKj-r0-jw2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="snP-Lu-iX2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xl1-5n-fxy" secondAttribute="bottom" constant="16" id="y2t-iY-gQW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="136.80000000000001" y="153.69458128078819"/>

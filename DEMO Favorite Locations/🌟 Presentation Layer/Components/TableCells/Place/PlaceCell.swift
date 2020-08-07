@@ -23,7 +23,7 @@ class PlaceCell: TableCell {
     // MARK: - Setup functions
     override func setupView() {
         self.apply(.clear())
-        self.containerView.apply(.roundedAllCorners(AppTheme.blue))
+        self.containerView.apply(.roundedAllCorners(AppTheme.mainAccent))
     }
     
     override func updateViews() {

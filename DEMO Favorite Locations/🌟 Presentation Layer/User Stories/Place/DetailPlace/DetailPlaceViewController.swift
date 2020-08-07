@@ -23,7 +23,10 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
     @IBOutlet private weak var descriptionTextField: UITextField!
     @IBOutlet private weak var typeLabel: UILabel!
     @IBOutlet private weak var typeTextField: UITextField!
-    @IBOutlet private weak var addButton: UIButton!
+    
+    @IBOutlet private weak var addImageButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet private weak var cancelButton: UIButton!
     
     // MARK: - Props
     fileprivate var output: DetailPlaceViewOutput? {
@@ -51,6 +54,8 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
         self.titleTextField.placeholder = AppLocalization.Detail.titlePH.loc
         self.descriptionTextField.placeholder = AppLocalization.Detail.descriptionPH.loc
         self.typeTextField.placeholder = AppLocalization.Detail.typePH.loc
+        
+        self.saveButton.setTitle(AppLocalization.General.save.loc, for: .normal)
     }
     
     func setupActions() { }
@@ -59,8 +64,6 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
         self.view.apply(.asBackground())
         self.coverBackgroundView.apply(.forContent())
         
-        self.addButton.apply(.circle(image: AppAssets.photoAdd, imageColor: AppTheme.white))
-        
         self.titleLabel.apply(.sfHeadlineRegular16(AppTheme.white, .left))
         self.descriptionLabel.apply(.sfHeadlineRegular16(AppTheme.white, .left))
         self.typeLabel.apply(.sfHeadlineRegular16(AppTheme.white, .left))
@@ -68,14 +71,24 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
         self.titleTextField.apply(.standart())
         self.descriptionTextField.apply(.standart())
         self.typeTextField.apply(.standart())
+        
+        self.addImageButton.apply(.circleColoredWithOnlyImage(AppAssets.iconAddImage, imageColor: AppTheme.white))
+        self.saveButton.apply(.accent())
+        self.cancelButton.apply(.accentNegativeWithOnlyImage(AppAssets.iconBack))
     }
     
     // MARK: - DetailPlaceViewInput
     override func setupInitialState(with viewModel: ViperViewModel) {
         super.setupInitialState(with: viewModel)
         
+        guard let viewModel = viewModel as? DetailPlaceViewModel else { return }
+        self.titleTextField.text = viewModel.place.title
+        self.descriptionTextField.text = viewModel.place.description
+        self.titleTextField.text = viewModel.place.title
+        
         self.setupComponents()
         self.setupActions()
+        
     }
     
 }

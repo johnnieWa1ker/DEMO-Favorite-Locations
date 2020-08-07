@@ -15,7 +15,7 @@ protocol PlacesViewInput: ViperViewInput {
 }
 
 protocol PlacesViewOutput: ViperViewOutput {
-    func selectedCell(_ model: PlaceModel)
+    func selectedCell(_ place: PlaceModel)
 }
 
 class PlacesViewController: ViperViewController, PlacesViewInput {

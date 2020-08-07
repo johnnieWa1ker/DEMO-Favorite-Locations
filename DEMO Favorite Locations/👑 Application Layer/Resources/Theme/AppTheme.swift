@@ -21,6 +21,16 @@ enum AppTheme {
     }
     
     // MARK: - Custom colors
+    /// Returns one of the colors used in the project. This is the main color for accent buttons / headers / icons and other
+    public static var mainAccent: UIColor {
+        switch AppThemeManager.current.type {
+        case .light:
+            return AppTheme.blue
+        case .dark:
+            return AppTheme.blue
+        }
+    }
+    
     /// HEX #000000
     public static var black: UIColor {
         switch AppThemeManager.current.type {
