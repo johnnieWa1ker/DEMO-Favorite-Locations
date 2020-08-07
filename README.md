@@ -5,9 +5,9 @@ Demo application based on TableView and MapView.
 In it, I want to focus on using MapKit and working with the Realm database.
 The image displays the state of the application "at the moment"
   <p float="right">
-    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demoScreenshot1.imageset/demoScreenshot1.png" width="24%"/>
-    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demoScreenshot2.imageset/demoScreenshot2.png" width="24%"/>
-    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demoScreenshot3.imageset/demoScreenshot3.png" width="24%"/>
+    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo1.imageset/demo1.png" width="32%"/>
+    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo2.imageset/demo2.png" width="32%"/>
+    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo3.imageset/demo3.png" width="32%"/>
   </p>
 
 ## 🏃‍♂️ Getting Started

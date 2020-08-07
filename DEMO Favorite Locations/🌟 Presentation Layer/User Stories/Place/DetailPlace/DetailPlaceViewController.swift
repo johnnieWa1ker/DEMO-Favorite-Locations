@@ -10,7 +10,13 @@ import GKViper
 
 protocol DetailPlaceViewInput: ViperViewInput { }
 
-protocol DetailPlaceViewOutput: ViperViewOutput { }
+protocol DetailPlaceViewOutput: ViperViewOutput {
+    func pressedCancelButton()
+    func pressedSaveButton()
+    func editTitle(_ value: String?)
+    func editDescription(_ value: String?)
+    func editType(_ value: String?)
+}
 
 class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
 
@@ -58,7 +64,16 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
         self.saveButton.setTitle(AppLocalization.General.save.loc, for: .normal)
     }
     
-    func setupActions() { }
+    func setupActions() {
+        self.cancelButton.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
+        self.saveButton.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
+        
+        [
+            self.titleTextField,
+            self.descriptionTextField,
+            self.typeTextField
+        ].forEach({ $0?.addTarget(self, action: #selector(self.tfEditing(_:)), for: .editingChanged) })
+    }
     
     func applyStyles() {
         self.view.apply(.asBackground())
@@ -88,13 +103,38 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
         
         self.setupComponents()
         self.setupActions()
-        
     }
-    
 }
 
 // MARK: - Actions
-extension DetailPlaceViewController { }
+extension DetailPlaceViewController {
+    
+    @objc
+    func btnAction(_ sender: UIButton) {
+        switch sender {
+        case self.cancelButton:
+            self.output?.pressedCancelButton()
+        case self.saveButton:
+            self.output?.pressedSaveButton()
+        default:
+            break
+        }
+    }
+    
+    @objc
+    func tfEditing(_ sender: UITextField) {
+        switch sender {
+        case self.titleTextField:
+            self.output?.editTitle(sender.text)
+        case self.descriptionTextField:
+            self.output?.editDescription(sender.text)
+        case typeTextField:
+            self.output?.editType(sender.text)
+        default:
+            break
+        }
+    }
+}
 
 // MARK: - Module functions
 extension DetailPlaceViewController { }

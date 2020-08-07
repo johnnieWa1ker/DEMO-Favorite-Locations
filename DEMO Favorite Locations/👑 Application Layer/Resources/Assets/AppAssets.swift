@@ -53,8 +53,23 @@ enum AppAssets {
         return img
     }
     
-    static var placePlaceholder: UIImage? {
-        let img = UIImage(named: "placePlaceholder")
+    static var place1: UIImage? {
+        let img = UIImage(named: "place1")
+        return img
+    }
+    
+    static var place2: UIImage? {
+        let img = UIImage(named: "place2")
+        return img
+    }
+    
+    static var place3: UIImage? {
+        let img = UIImage(named: "place3")
+        return img
+    }
+    
+    static var place4: UIImage? {
+        let img = UIImage(named: "place4")
         return img
     }
     

@@ -51,4 +51,12 @@ extension StyleWrapper where Element: UIView {
         }
         return wrap
     }
+    
+    /// View with rounded left corners
+    static func roundedLeftCorners() -> StyleWrapper {
+        let wrap = StyleWrapper.wrap { view in
+            view.roundCorners([.topLeft, .bottomLeft], radius: 10.0)
+        }
+        return wrap
+    }
 }

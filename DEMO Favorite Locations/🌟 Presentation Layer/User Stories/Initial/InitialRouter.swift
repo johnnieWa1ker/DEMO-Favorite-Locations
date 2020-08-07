@@ -29,6 +29,8 @@ class InitialRouter: ViperRouter, InitialRouterInput {
         let mapVC = MapAssembly.create()
         _ = MapAssembly.configure(with: mapVC)
         
+//        let placesNC = BasicNavigationController(rootViewController: placesVC)
+        
         let placesBarItem = UITabBarItem(title: "Places", image: UIImage(systemName: "star.fill"), selectedImage: nil)
         let mapBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), selectedImage: nil)
         
