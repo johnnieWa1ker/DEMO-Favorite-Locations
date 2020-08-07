@@ -23,7 +23,7 @@ class PlaceCell: TableCell {
     // MARK: - Setup functions
     override func setupView() {
         self.apply(.clear())
-        self.containerView.apply(.roundedAllCorners(AppTheme.mainAccent))
+        self.containerView.apply(.roundedAllCorners(AppTheme.lightGray))
     }
     
     override func updateViews() {
@@ -31,18 +31,22 @@ class PlaceCell: TableCell {
         
         let place = model.place
         
-        let starRatingView = StarRatingView(frame: CGRect(origin: .zero, size: CGSize(width: 250, height: 50)), rating: Float(place.rating), color: UIColor.systemOrange, starRounding: .roundToHalfStar)
-        self.containerView.addSubview(starRatingView)
-        starRatingView.pin.topLeft(to: descriptionLabel.anchor.bottomLeft).marginVertical(4.0)
-        starRatingView.pin.width(self.containerView.frame.width / 4)
-        starRatingView.pin.height(16.0)
-        
         self.coverImage?.image = place.cover
         self.coverImage?.clipsToBounds = true
         self.coverImage?.contentMode = .scaleAspectFill
-        self.coverImage.layer.cornerRadius = 10.0
+        self.coverImage.apply(.roundedLeftCorners())
+        
         self.titleLabel.text = place.title
+        self.titleLabel.apply(.sfHeadlineRegular16(AppTheme.black, .left))
+        
         self.descriptionLabel.text = place.description
+        self.descriptionLabel.apply(.sfBodyRegular14(AppTheme.black, .left))
+        
+        let starRatingView = StarRatingView(frame: CGRect(origin: .zero, size: CGSize(width: 250, height: 50)), rating: Float(place.rating), color: UIColor.systemOrange, starRounding: .roundToHalfStar)
+        self.containerView.addSubview(starRatingView)
+        starRatingView.pin.topLeft(to: descriptionLabel.anchor.bottomLeft).marginVertical(16.0)
+        starRatingView.pin.width(self.containerView.frame.width / 4)
+        starRatingView.pin.height(16.0)
     }
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) { }

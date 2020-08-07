@@ -28,10 +28,12 @@ class DetailPlacePresenter: ViperPresenter, DetailPlacePresenterInput, DetailPla
     }
     
     var viewModel: DetailPlaceViewModel
+    var placeInput: PlacesPresenterInput?
     
     // MARK: - Initialization
-    init(place: PlaceModel) {
+    init(place: PlaceModel, input: ViperPresenterInput) {
         self.viewModel = DetailPlaceViewModel(place: place)
+        self.placeInput = input as? PlacesPresenterInput
     }
     
     // MARK: - DetailPlacePresenterInput
@@ -39,6 +41,30 @@ class DetailPlacePresenter: ViperPresenter, DetailPlacePresenterInput, DetailPla
     // MARK: - DetailPlaceViewOutput
     override func viewIsReady(_ controller: UIViewController) {
         self.view?.setupInitialState(with: self.viewModel)
+    }
+    
+    func pressedCancelButton() {
+        self.router?.dismiss(animated: true)
+    }
+    
+    func pressedSaveButton() {
+        self.placeInput?.updatePlace(self.viewModel.place)
+        self.router?.dismiss(animated: true)
+    }
+    
+    func editTitle(_ value: String?) {
+        guard let value = value else { return }
+        self.viewModel.place.title = value
+    }
+    
+    func editDescription(_ value: String?) {
+        guard let value = value else { return }
+        self.viewModel.place.description = value
+    }
+    
+    func editType(_ value: String?) {
+        guard let value = value else { return }
+        self.viewModel.place.type = value
     }
         
     // MARK: - Module functions

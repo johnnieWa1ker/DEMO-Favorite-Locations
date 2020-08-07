@@ -9,7 +9,9 @@
 import GKViper
 import GKRepresentable
 
-protocol PlacesPresenterInput: ViperPresenterInput { }
+protocol PlacesPresenterInput: ViperPresenterInput {
+    func updatePlace(_ place: PlaceModel)
+}
 
 class PlacesPresenter: ViperPresenter, PlacesPresenterInput, PlacesViewOutput {
     
@@ -36,6 +38,10 @@ class PlacesPresenter: ViperPresenter, PlacesPresenterInput, PlacesViewOutput {
     }
     
     // MARK: - PlacesPresenterInput
+    func updatePlace(_ place: PlaceModel) {
+        self.viewModel.places.append(place)
+        makeSections()
+    }
     
     // MARK: - PlacesViewOutput
     override func viewIsReady(_ controller: UIViewController) {
@@ -44,7 +50,7 @@ class PlacesPresenter: ViperPresenter, PlacesPresenterInput, PlacesViewOutput {
     }
     
     func selectedCell(_ place: PlaceModel) {
-        self.router?.presentModalDetail(place)
+        self.router?.presentModalDetail(place, input: self)
     }
         
     // MARK: - Module functions
