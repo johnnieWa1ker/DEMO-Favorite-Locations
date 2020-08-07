@@ -23,7 +23,9 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
     @IBOutlet private weak var descriptionTextField: UITextField!
     @IBOutlet private weak var typeLabel: UILabel!
     @IBOutlet private weak var typeTextField: UITextField!
-    @IBOutlet private weak var addButton: UIButton!
+    
+    @IBOutlet private weak var addImageButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
     
     // MARK: - Props
     fileprivate var output: DetailPlaceViewOutput? {
@@ -59,7 +61,7 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
         self.view.apply(.asBackground())
         self.coverBackgroundView.apply(.forContent())
         
-        self.addButton.apply(.circle(image: AppAssets.photoAdd, imageColor: AppTheme.white))
+        self.addImageButton.apply(.circle(image: AppAssets.photoAdd, imageColor: AppTheme.white))
         
         self.titleLabel.apply(.sfHeadlineRegular16(AppTheme.white, .left))
         self.descriptionLabel.apply(.sfHeadlineRegular16(AppTheme.white, .left))
@@ -74,8 +76,14 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
     override func setupInitialState(with viewModel: ViperViewModel) {
         super.setupInitialState(with: viewModel)
         
+        guard let viewModel = viewModel as? DetailPlaceViewModel else { return }
+        self.titleTextField.text = viewModel.place.title
+        self.descriptionTextField.text = viewModel.place.description
+        self.titleTextField.text = viewModel.place.title
+        
         self.setupComponents()
         self.setupActions()
+        
     }
     
 }

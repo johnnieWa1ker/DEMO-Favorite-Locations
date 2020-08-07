@@ -9,7 +9,7 @@
 import GKViper
 
 protocol PlacesRouterInput: ViperRouterInput {
-    func pushToDetail(_ model: PlaceModel)
+    func presentModalDetail(_ place: PlaceModel)
 }
 
 class PlacesRouter: ViperRouter, PlacesRouterInput {
@@ -23,12 +23,12 @@ class PlacesRouter: ViperRouter, PlacesRouterInput {
     }
     
     // MARK: - PlacesRouterInput
-    func pushToDetail(_ model: PlaceModel) {
+    func presentModalDetail(_ place: PlaceModel) {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
             
             let vc = DetailPlaceAssembly.create()
-            _ = DetailPlaceAssembly.configure(with: vc)
+            _ = DetailPlaceAssembly.configure(with: vc, place: place)
             
             let nc = BasicNavigationController(rootViewController: vc)
             

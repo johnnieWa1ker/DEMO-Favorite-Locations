@@ -11,6 +11,10 @@ import GKViper
 class DetailPlaceViewModel: ViperViewModel {
     
     // MARK: - Props
+    var place: PlaceModel
     
     // MARK: - Initialization
+    init(place: PlaceModel) {
+        self.place = place
+    }
 }

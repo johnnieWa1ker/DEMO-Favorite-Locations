@@ -17,8 +17,8 @@ enum DetailPlaceAssembly {
     }
     
     // Create and link modules with controller, return presenter input
-    static func configure(with reference: DetailPlaceViewController) -> DetailPlacePresenterInput {
-        let presenter = DetailPlacePresenter()
+    static func configure(with reference: DetailPlaceViewController, place: PlaceModel) -> DetailPlacePresenterInput {
+        let presenter = DetailPlacePresenter(place: place)
         
         let router = DetailPlaceRouter()
         router._mainController = reference
