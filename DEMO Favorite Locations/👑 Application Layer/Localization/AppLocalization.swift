@@ -70,4 +70,13 @@ enum AppLocalization {
         case male                       = "SEX_MALE"
         case female                     = "SEX_FEMALE"
     }
+    
+    enum Detail: String, Localizable {
+        case titleLabel                 = "DETAIL_TITLE_LABEL"
+        case descriptionLabel           = "DETAIL_DESCRIPTION_LABEL"
+        case typeLabel                  = "DETAIL_TYPE_LABEL"
+        case titlePH                    = "DETAIL_TITLE_PH"
+        case descriptionPH              = "DETAIL_DESCRIPTION_PH"
+        case typePH                     = "DETAIL_TYPE_PH"
+    }
 }

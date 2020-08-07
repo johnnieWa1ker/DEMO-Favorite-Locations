@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PinLayout
 
 extension StyleWrapper where Element: UIButton {
     
@@ -31,6 +32,23 @@ extension StyleWrapper where Element: UIButton {
             button.titleLabel?.font = SFPRO.medium.font(size: 18.0)
             button.layer.cornerRadius = 10.0
             button.layer.masksToBounds = true
+        }
+        return wrap
+    }
+    
+    /// Round button with image in the center
+    static func circle(image: UIImage?, imageColor: UIColor) -> StyleWrapper {
+        let wrap = StyleWrapper.wrap { button in
+            button.backgroundColor = AppTheme.blue
+            button.layer.cornerRadius = button.frame.width / 2
+            button.layer.masksToBounds = true
+            button.setTitle("", for: .normal)
+            
+            let imageView = UIImageView(image: image?.withTintColor(imageColor))
+            button.addSubview(imageView)
+            imageView.pin.width(button.frame.width / 2.2)
+            imageView.pin.height(button.frame.height / 2.2)
+            imageView.pin.center(to: button.anchor.center)
         }
         return wrap
     }

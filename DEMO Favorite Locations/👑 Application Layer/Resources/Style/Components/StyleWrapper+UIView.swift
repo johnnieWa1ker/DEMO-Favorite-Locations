@@ -21,7 +21,7 @@ extension StyleWrapper where Element: UIView {
     /// Standard view style for background
     static func asBackground() -> StyleWrapper {
         let wrap = StyleWrapper.wrap { view in
-            view.backgroundColor = AppTheme.black
+            view.backgroundColor = AppTheme.cloudBurst
         }
         return wrap
     }

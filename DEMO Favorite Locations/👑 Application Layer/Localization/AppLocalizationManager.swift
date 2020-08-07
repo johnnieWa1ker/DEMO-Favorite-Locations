@@ -12,13 +12,15 @@ enum AppLocalizationType: String {
     case english = "LOCALIZATION_ENG"
     case russian = "LOCALIZATION_RUS"
     
-    static let base: AppLocalizationType = .russian
+    static let base: AppLocalizationType = .english
     
     init(value: String?) {
         if let value = value {
             switch value {
             case AppLocalizationType.english.rawValue:
                 self = .english
+            case AppLocalizationType.russian.rawValue:
+                self = .russian
             default:
                 self = AppLocalizationType.base
             }
@@ -32,6 +34,8 @@ enum AppLocalizationType: String {
             switch languageKey {
             case AppLocalizationType.english.languageKey:
                 self = .english
+            case AppLocalizationType.russian.languageKey:
+                self = .russian
             default:
                 self = AppLocalizationType.base
             }
@@ -48,9 +52,9 @@ enum AppLocalizationType: String {
     var languageKey: String {
         switch self {
         case .english:
-            return "en"
+            return "en-EN"
         case .russian:
-            return "ru"
+            return "ru-RU"
         }
     }
     
@@ -68,7 +72,7 @@ enum AppLocalizationType: String {
         case .english:
             return AppLocalization.Language.english.localized
         case .russian:
-            return AppLocalization.Language.russian.localized            
+            return AppLocalization.Language.russian.localized
         }
     }
 }
@@ -104,7 +108,7 @@ class AppLocalizationManager {
     
     // MARK: - Supported localizations
     public static var list: [AppLocalizationType] {
-        let value: [AppLocalizationType] = [.english]
+        let value: [AppLocalizationType] = [.english, .russian]
         return value
     }
     
@@ -119,5 +123,5 @@ class AppLocalizationManager {
     // MARK: - Public functions
     public func change(localization type: AppLocalizationType) {
         UserDefaults.standard.set(type.key, forKey: AppDefaults.activeLocalization)
-    }   
+    }
 }

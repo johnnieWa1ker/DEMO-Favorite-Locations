@@ -11,10 +11,9 @@ import Foundation
 protocol Localizable: RawRepresentable { }
 
 extension Localizable {
-    
     var key: String {
-        let value = self.rawValue as? String ?? ""
-        return value
+        let key = self.rawValue as? String ?? ""
+        return key
     }
     
     var localized: String {
@@ -27,12 +26,10 @@ extension Localizable {
     }
     
     var loc: String {
-        let value = self.localized
-        return value
+        let loc = self.localized
+        return loc
     }
-    
 }
-
 
 extension String {
     var localized: String {
@@ -41,7 +38,7 @@ extension String {
     }
     
     var loc: String {
-        let value = self.localized
-        return value
+        let loc = self.localized
+        return loc
     }
 }

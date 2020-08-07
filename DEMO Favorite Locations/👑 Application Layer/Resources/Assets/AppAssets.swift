@@ -28,6 +28,10 @@ enum AppAssets {
     }
     
     // MARK: - Buttons
+    static var photoAdd: UIImage? {
+        let img = UIImage(named: "photoAdd")
+        return img
+    }
     
     // MARK: - Icons
     
@@ -39,6 +43,11 @@ enum AppAssets {
     // MARK: - Logos
     
     // MARK: - Placeholders
+    static var addImagePlaceholder: UIImage? {
+        let img = UIImage(named: "addImagePlaceholder")
+        return img
+    }
+    
     static var placePlaceholder: UIImage? {
         let img = UIImage(named: "placePlaceholder")
         return img

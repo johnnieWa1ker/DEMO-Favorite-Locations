@@ -8,7 +8,9 @@
 
 import GKViper
 
-protocol PlacesRouterInput: ViperRouterInput { }
+protocol PlacesRouterInput: ViperRouterInput {
+    func pushToDetail(_ model: PlaceModel)
+}
 
 class PlacesRouter: ViperRouter, PlacesRouterInput {
     
@@ -21,6 +23,18 @@ class PlacesRouter: ViperRouter, PlacesRouterInput {
     }
     
     // MARK: - PlacesRouterInput
+    func pushToDetail(_ model: PlaceModel) {
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            let vc = DetailPlaceAssembly.create()
+            _ = DetailPlaceAssembly.configure(with: vc)
+            
+            let nc = BasicNavigationController(rootViewController: vc)
+            
+            strongSelf.present(nc, animated: true)
+        }
+    }
     
     // MARK: - Module functions
 }

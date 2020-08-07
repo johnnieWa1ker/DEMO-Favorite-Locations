@@ -42,6 +42,10 @@ class PlacesPresenter: ViperPresenter, PlacesPresenterInput, PlacesViewOutput {
         self.view?.setupInitialState(with: self.viewModel)
         self.makeSections()
     }
+    
+    func selectedCell(_ model: PlaceModel) {
+        self.router?.pushToDetail(model)
+    }
         
     // MARK: - Module functions
     func makeSections() {

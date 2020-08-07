@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.0'
+platform :ios, '13.0'
 
 inhibit_all_warnings!
 
@@ -28,5 +28,8 @@ target 'DEMO Favorite Locations' do
   
   # https://github.com/layoutBox/PinLayout
   pod 'PinLayout'
+  
+  # https://github.com/hirokimu/EMTNeumorphicView
+  pod 'EMTNeumorphicView'
 
 end
