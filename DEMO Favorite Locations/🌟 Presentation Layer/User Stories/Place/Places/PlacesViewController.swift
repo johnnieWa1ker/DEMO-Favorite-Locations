@@ -6,15 +6,17 @@
 //  Copyright © 2020 JW. All rights reserved.
 //
 
+import SwiftUI
 import GKViper
 import GKRepresentable
 
 protocol PlacesViewInput: ViperViewInput {
-    
     func updateSections(_ sections: [TableSectionModel])
 }
 
-protocol PlacesViewOutput: ViperViewOutput { }
+protocol PlacesViewOutput: ViperViewOutput {
+    func selectedCell(_ model: PlaceModel)
+}
 
 class PlacesViewController: ViperViewController, PlacesViewInput {
 
@@ -104,4 +106,11 @@ extension PlacesViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension PlacesViewController: UITableViewDelegate { }
+extension PlacesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let model = self.sections[indexPath.section].rows[indexPath.row] as? PlaceCellModel {
+            self.output?.selectedCell(model.place)
+        }
+    }
+}

@@ -1,4 +1,5 @@
 PODS:
+  - EMTNeumorphicView (1.0.4)
   - GKCoreData (1.0.5):
     - GKExtensions (~> 1.1.0)
   - GKExtensions (1.1.0)
@@ -23,6 +24,7 @@ PODS:
     - QuickLayout (= 3.0.0)
 
 DEPENDENCIES:
+  - EMTNeumorphicView
   - GKRepresentable (~> 1.0.1)
   - GKUseCase (~> 1.0.1)
   - GKViper (~> 1.0.0)
@@ -34,6 +36,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - EMTNeumorphicView
     - GKCoreData
     - GKExtensions
     - GKNetwork
@@ -48,6 +51,7 @@ SPEC REPOS:
     - SwiftEntryKit
 
 SPEC CHECKSUMS:
+  EMTNeumorphicView: cb5e92953e43b1872ab47fefd451a9ce0c16fc77
   GKCoreData: c9d4315c9d425bac1dca8448f3ffac0d13c3644b
   GKExtensions: e2336b4ae2a62bfc968fd1a4ced30365ffb3f73b
   GKNetwork: 8cf98586bc75269e45dd36e4aed047eb67f6cfc1
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
 
-PODFILE CHECKSUM: fd16763fb2f6fdff9d0584cda44f2ddec60355f8
+PODFILE CHECKSUM: 75a7dd9faa7a1c059ef08007ae15b81cf1964e13
 
 COCOAPODS: 1.9.3

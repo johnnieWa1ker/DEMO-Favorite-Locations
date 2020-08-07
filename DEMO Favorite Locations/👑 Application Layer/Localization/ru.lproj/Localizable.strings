@@ -59,3 +59,11 @@
 // MARK: - Sex
 "SEX_MALE"                          = "Мужской";
 "SEX_FEMALE"                        = "Женский";
+
+// MARK: - Detail
+"DETAIL_TITLE_LABEL"                = "Название";
+"DETAIL_DESCRIPTION_LABEL"          = "Описание";
+"DETAIL_TYPE_LABEL"                 = "Тип";
+"DETAIL_TITLE_PH"                   = "Как называется это место?";
+"DETAIL_DESCRIPTION_PH"             = "Как бы вы описали это место?";
+"DETAIL_TYPE_PH"                    = "Выберите один из вариантов";

@@ -7,6 +7,7 @@ The image displays the state of the application "at the moment"
   <p float="right">
     <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demoScreenshot1.imageset/demoScreenshot1.png" width="24%"/>
     <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demoScreenshot2.imageset/demoScreenshot2.png" width="24%"/>
+    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demoScreenshot3.imageset/demoScreenshot3.png" width="24%"/>
   </p>
 
 ## 🏃‍♂️ Getting Started

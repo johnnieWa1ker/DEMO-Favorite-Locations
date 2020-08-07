@@ -6,7 +6,7 @@
 //  Copyright © 2020 JW. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 typealias Style<Element> = (Element) -> Void
 

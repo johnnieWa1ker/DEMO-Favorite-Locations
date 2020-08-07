@@ -21,8 +21,28 @@ enum AppTheme {
     }
     
     // MARK: - Custom colors
-    /// HEX #333E4F
+    /// HEX #000000
     public static var black: UIColor {
+        switch AppThemeManager.current.type {
+        case .light:
+            return UIColor(hex: "000000", alpha: 1.0)
+        case .dark:
+            return UIColor(hex: "000000", alpha: 1.0)
+        }
+    }
+    
+    /// return UIColor with HEX #000000 and custom alpha chanel
+    public static func black(with alpha: Double?) -> UIColor {
+        switch AppThemeManager.current.type {
+        case .light:
+            return UIColor(hex: "000000", alpha: CGFloat(alpha ?? 1.0))
+        case .dark:
+            return UIColor(hex: "000000", alpha: CGFloat(alpha ?? 1.0))
+        }
+    }
+    
+    /// HEX #333E4F
+    public static var cloudBurst: UIColor {
         switch AppThemeManager.current.type {
         case .light:
             return UIColor(hex: "333E4F", alpha: 1.0)
@@ -101,6 +121,16 @@ enum AppTheme {
         }
     }
     
+    /// HEX #1978F2
+    public static var blue: UIColor {
+        switch AppThemeManager.current.type {
+        case .light:
+            return UIColor(hex: "1978F2", alpha: 1.0)
+        case .dark:
+            return UIColor(hex: "1978F2", alpha: 1.0)
+        }
+    }
+    
     /// HEX #FFFFFF
     public static var white: UIColor {
         switch AppThemeManager.current.type {
@@ -111,13 +141,13 @@ enum AppTheme {
         }
     }
     
-    /// HEX #1978F2
-    public static var blue: UIColor {
+    /// return UIColor with HEX #FFFFFF and custom alpha chanel
+    public static func white(with alpha: Double?) -> UIColor {
         switch AppThemeManager.current.type {
         case .light:
-            return UIColor(hex: "1978F2", alpha: 1.0)
+            return UIColor(hex: "FFFFFF", alpha: CGFloat(alpha ?? 1.0))
         case .dark:
-            return UIColor(hex: "1978F2", alpha: 1.0)
+            return UIColor(hex: "FFFFFF", alpha: CGFloat(alpha ?? 1.0))
         }
     }
 }

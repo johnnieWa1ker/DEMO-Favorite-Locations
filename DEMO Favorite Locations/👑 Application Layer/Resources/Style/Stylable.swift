@@ -25,5 +25,4 @@ extension Stylable {
             style(self)
         }
     }
-    
 }
