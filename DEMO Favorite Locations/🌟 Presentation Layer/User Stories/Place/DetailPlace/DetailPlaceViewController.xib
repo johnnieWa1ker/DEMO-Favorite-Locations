@@ -10,11 +10,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailPlaceViewController" customModule="DEMO_Favorite_Locations" customModuleProvider="target">
             <connections>
                 <outlet property="addImageButton" destination="dle-6d-K3X" id="8f0-oL-gvW"/>
+                <outlet property="cancelButton" destination="KI2-Sp-uEU" id="iy1-oh-cAD"/>
                 <outlet property="coverBackgroundView" destination="izc-wK-zdG" id="HJO-QH-b0W"/>
                 <outlet property="coverImageView" destination="ulv-DI-VlA" id="bYz-qU-U2G"/>
                 <outlet property="descriptionLabel" destination="6aj-0m-YRH" id="XTv-oK-2Yj"/>
                 <outlet property="descriptionTextField" destination="gZn-Pf-FK5" id="Rgw-0v-P4G"/>
-                <outlet property="saveButton" destination="KI2-Sp-uEU" id="iy1-oh-cAD"/>
+                <outlet property="saveButton" destination="yGO-WS-0iC" id="4ZY-aS-fTn"/>
                 <outlet property="titleLabel" destination="xol-RF-HFf" id="H8b-Qp-hzT"/>
                 <outlet property="titleTextField" destination="dRM-qA-f1a" id="apt-bS-UYP"/>
                 <outlet property="typeLabel" destination="LcK-Yj-ClU" id="iih-8m-9s0"/>
@@ -102,38 +103,51 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI2-Sp-uEU" userLabel="Save Button">
-                    <rect key="frame" x="16" y="665" width="343" height="48"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="48" id="zoe-Ay-zYt"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Xl1-5n-fxy" userLabel="Actions Stack View">
+                    <rect key="frame" x="16" y="714" width="343" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI2-Sp-uEU" userLabel="Cancel Button">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="KI2-Sp-uEU" secondAttribute="height" multiplier="1:1" id="kJU-9M-lrY"/>
+                                <constraint firstAttribute="height" constant="48" id="zoe-Ay-zYt"/>
+                            </constraints>
+                            <state key="normal" title="cancelButton"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGO-WS-0iC" userLabel="Save Button">
+                            <rect key="frame" x="64" y="0.0" width="279" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="bwQ-N1-VIf"/>
+                            </constraints>
+                            <state key="normal" title="saveButton"/>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ulv-DI-VlA" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="3DH-z5-7KX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lt7-mb-jdh" secondAttribute="trailing" constant="16" id="3pP-LH-jSL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xl1-5n-fxy" secondAttribute="trailing" constant="16" id="6fT-7D-h75"/>
                 <constraint firstAttribute="top" secondItem="izc-wK-zdG" secondAttribute="top" id="CGA-HU-22a"/>
                 <constraint firstItem="izc-wK-zdG" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.5" id="ELp-Zo-Avt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dle-6d-K3X" secondAttribute="trailing" constant="16" id="Esh-JU-eWB"/>
                 <constraint firstItem="Ip8-9E-KKK" firstAttribute="top" secondItem="FKj-r0-jw2" secondAttribute="bottom" constant="16" id="OLd-Ne-sRT"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FKj-r0-jw2" secondAttribute="trailing" constant="16" id="RLH-gR-RIL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KI2-Sp-uEU" secondAttribute="trailing" constant="16" id="XNB-2j-2s3"/>
                 <constraint firstItem="ulv-DI-VlA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZhG-4b-HU2"/>
                 <constraint firstItem="FKj-r0-jw2" firstAttribute="top" secondItem="lt7-mb-jdh" secondAttribute="bottom" constant="16" id="aNr-1m-xQx"/>
                 <constraint firstItem="ulv-DI-VlA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="akW-gp-3bR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ip8-9E-KKK" secondAttribute="trailing" constant="16" id="aoE-pM-qT9"/>
                 <constraint firstItem="izc-wK-zdG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dHG-fb-y9Y"/>
                 <constraint firstItem="ulv-DI-VlA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eEc-cR-Taz"/>
-                <constraint firstItem="KI2-Sp-uEU" firstAttribute="top" secondItem="5YT-NE-Fr5" secondAttribute="bottom" constant="16" id="hm8-2J-i6b"/>
                 <constraint firstItem="lt7-mb-jdh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="iRv-Ea-11p"/>
                 <constraint firstItem="Ip8-9E-KKK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ic3-Cs-jKe"/>
                 <constraint firstItem="lt7-mb-jdh" firstAttribute="top" secondItem="ulv-DI-VlA" secondAttribute="bottom" constant="24" id="jiN-yb-1Au"/>
                 <constraint firstItem="dle-6d-K3X" firstAttribute="top" secondItem="ulv-DI-VlA" secondAttribute="bottom" constant="-35" id="kZY-dg-ELe"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="izc-wK-zdG" secondAttribute="trailing" id="lPp-aw-6Ve"/>
-                <constraint firstItem="KI2-Sp-uEU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="pmU-u6-yZq"/>
+                <constraint firstItem="Xl1-5n-fxy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="nSx-tU-aaY"/>
                 <constraint firstItem="FKj-r0-jw2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="snP-Lu-iX2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Xl1-5n-fxy" secondAttribute="bottom" constant="16" id="y2t-iY-gQW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="136.80000000000001" y="153.69458128078819"/>
