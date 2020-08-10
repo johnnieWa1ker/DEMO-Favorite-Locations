@@ -15,6 +15,7 @@ protocol PlacesViewInput: ViperViewInput {
 }
 
 protocol PlacesViewOutput: ViperViewOutput {
+    func createNewPlace()
     func selectedCell(_ place: PlaceModel)
 }
 
@@ -41,6 +42,8 @@ class PlacesViewController: ViperViewController, PlacesViewInput {
     func setupComponents() {
         self.navigationItem.title = ""
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPlaceButtonAction))
+        self.navigationController?.navigationBar.isUserInteractionEnabled = true
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -74,7 +77,13 @@ class PlacesViewController: ViperViewController, PlacesViewInput {
 }
 
 // MARK: - Actions
-extension PlacesViewController { }
+extension PlacesViewController {
+    
+    @objc
+    func addPlaceButtonAction() {
+        self.output?.createNewPlace()
+    }
+}
 
 // MARK: - Module functions
 extension PlacesViewController { }

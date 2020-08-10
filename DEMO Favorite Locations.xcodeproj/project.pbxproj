@@ -10,6 +10,7 @@
 		79059F1B24D8432A003567C0 /* StarRatingStackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79059F1824D8432A003567C0 /* StarRatingStackView.xib */; };
 		79059F1C24D8432A003567C0 /* StarRatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79059F1924D8432A003567C0 /* StarRatingStackView.swift */; };
 		79059F1D24D8432A003567C0 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79059F1A24D8432A003567C0 /* StarRatingView.swift */; };
+		795B74E124E185BF0087DE0B /* CrudType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795B74E024E185BF0087DE0B /* CrudType.swift */; };
 		79714CFF24D88B9500304D8C /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79714CFE24D88B9500304D8C /* PlaceModel.swift */; };
 		7981732624D2D4B1001C8EA1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7981732524D2D4B1001C8EA1 /* Podfile */; };
 		7981732824D2D4B1001C8EA1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7981732724D2D4B1001C8EA1 /* .swiftlint.yml */; };
@@ -93,6 +94,7 @@
 		79059F1824D8432A003567C0 /* StarRatingStackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StarRatingStackView.xib; sourceTree = "<group>"; };
 		79059F1924D8432A003567C0 /* StarRatingStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingStackView.swift; sourceTree = "<group>"; };
 		79059F1A24D8432A003567C0 /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		795B74E024E185BF0087DE0B /* CrudType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudType.swift; sourceTree = "<group>"; };
 		79714CFE24D88B9500304D8C /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		7981732224D2D4B1001C8EA1 /* DEMO Favorite Locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DEMO Favorite Locations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7981732524D2D4B1001C8EA1 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -502,6 +504,7 @@
 			children = (
 				7981739D24D2D4B1001C8EA1 /* EntityType.swift */,
 				7981739F24D2D4B1001C8EA1 /* NoticeParam.swift */,
+				795B74E024E185BF0087DE0B /* CrudType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -742,6 +745,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7981736324D2D4B1001C8EA1 /* Stylable.swift in Sources */,
+				795B74E124E185BF0087DE0B /* CrudType.swift in Sources */,
 				7981737524D2D4B1001C8EA1 /* AppThemeManager.swift in Sources */,
 				7981737324D2D4B1001C8EA1 /* AppTheme.swift in Sources */,
 				7981739624D2D4B1001C8EA1 /* InitialViewController.swift in Sources */,

@@ -11,10 +11,29 @@ import GKViper
 class DetailPlaceViewModel: ViperViewModel {
     
     // MARK: - Props
-    var place: PlaceModel
+    var currentPlace: PlaceModel?
+    
+    var newPlaceTitle: String?
+    var newPlaceDescription: String?
+    var newPlaceType: String?
+    var newPlaceCover: UIImage?
+    
+    var newPlace: PlaceModel? {
+        guard let newPlaceTitle = self.newPlaceTitle else { return nil }
+        guard let newPlaceDescription = self.newPlaceDescription else { return nil }
+        guard let newPlaceType = self.newPlaceType else { return nil }
+//        guard let newPlaceCover = self.newPlaceCover else { return nil }
+        
+        return PlaceModel(id: 1,
+                          title: newPlaceTitle,
+                          description: newPlaceDescription,
+                          type: newPlaceType,
+                          rating: 0.0,
+                          cover: UIImage())
+    }
     
     // MARK: - Initialization
-    init(place: PlaceModel) {
-        self.place = place
+    init(place: PlaceModel?) {
+        self.currentPlace = place
     }
 }
