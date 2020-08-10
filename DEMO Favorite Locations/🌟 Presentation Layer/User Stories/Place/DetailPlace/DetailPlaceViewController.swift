@@ -8,17 +8,21 @@
 
 import GKViper
 
-protocol DetailPlaceViewInput: ViperViewInput { }
+protocol DetailPlaceViewInput: ViperViewInput {
+    func showImageLoadMenu(_ alert: UIAlertController)
+    func showImagePickerController(_ source: UIImagePickerController.SourceType)
+}
 
 protocol DetailPlaceViewOutput: ViperViewOutput {
     func pressedCancelButton()
     func pressedSaveButton()
+    func pressedAddImageButton()
     func editTitle(_ value: String?)
     func editDescription(_ value: String?)
     func editType(_ value: String?)
 }
 
-class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
+class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput, UINavigationControllerDelegate {
 
     // MARK: - Outlets
     @IBOutlet private weak var coverBackgroundView: UIView!
@@ -67,6 +71,7 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
     func setupActions() {
         self.cancelButton.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
         self.saveButton.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
+        self.addImageButton.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
         
         [
             self.titleTextField,
@@ -97,12 +102,25 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
         super.setupInitialState(with: viewModel)
         
         guard let viewModel = viewModel as? DetailPlaceViewModel else { return }
-        self.titleTextField.text = viewModel.place.title
-        self.descriptionTextField.text = viewModel.place.description
-        self.titleTextField.text = viewModel.place.title
+        self.titleTextField.text = viewModel.currentPlace?.title
+        self.descriptionTextField.text = viewModel.currentPlace?.description
+        self.titleTextField.text = viewModel.currentPlace?.title
         
         self.setupComponents()
         self.setupActions()
+    }
+    
+    func showImageLoadMenu(_ alert: UIAlertController) {
+        self.present(alert, animated: true)
+    }
+    
+    func showImagePickerController(_ source: UIImagePickerController.SourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = source
+        imagePicker.allowsEditing = true
+        imagePicker.modalPresentationStyle = .overFullScreen
+        self.present(imagePicker, animated: true)
     }
 }
 
@@ -116,6 +134,8 @@ extension DetailPlaceViewController {
             self.output?.pressedCancelButton()
         case self.saveButton:
             self.output?.pressedSaveButton()
+        case self.addImageButton:
+            self.output?.pressedAddImageButton()
         default:
             break
         }
@@ -138,3 +158,21 @@ extension DetailPlaceViewController {
 
 // MARK: - Module functions
 extension DetailPlaceViewController { }
+
+// MARK: - UIImagePickerControllerDelegate
+extension DetailPlaceViewController: UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var image: UIImage?
+        if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            image = img
+        } else if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            image = img
+        }
+        if let img = image {
+            let imgResize = UIImage.resizeImage(image: img, newHeight: 300)
+            self.coverImageView.image = imgResize
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}

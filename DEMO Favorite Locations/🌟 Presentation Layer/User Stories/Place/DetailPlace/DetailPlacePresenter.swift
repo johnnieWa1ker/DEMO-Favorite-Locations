@@ -28,11 +28,13 @@ class DetailPlacePresenter: ViperPresenter, DetailPlacePresenterInput, DetailPla
     }
     
     var viewModel: DetailPlaceViewModel
+    var crudType: CrudType
     var placeInput: PlacesPresenterInput?
     
     // MARK: - Initialization
-    init(place: PlaceModel, input: ViperPresenterInput) {
+    init(place: PlaceModel?, crudType: CrudType, input: ViperPresenterInput) {
         self.viewModel = DetailPlaceViewModel(place: place)
+        self.crudType = crudType
         self.placeInput = input as? PlacesPresenterInput
     }
     
@@ -48,24 +50,62 @@ class DetailPlacePresenter: ViperPresenter, DetailPlacePresenterInput, DetailPla
     }
     
     func pressedSaveButton() {
-        self.placeInput?.updatePlace(self.viewModel.place)
+        
+        switch self.crudType {
+        case .create:
+            guard let place = self.viewModel.newPlace else { return }
+            self.placeInput?.updatePlace(place)
+        case .update:
+            guard let place = self.viewModel.currentPlace else { return }
+            self.placeInput?.updatePlace(place)
+        }
         self.router?.dismiss(animated: true)
     }
     
+    func pressedAddImageButton() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let camera = UIAlertAction(title: "Use camera", style: .default) { _ in self.view?.showImagePickerController(.camera) }
+        let photoLib = UIAlertAction(title: "Choose from library", style: .default) { _ in
+            self.view?.showImagePickerController(.photoLibrary) }
+        let cancel = UIAlertAction(title: AppLocalization.General.cancel.loc, style: .cancel)
+        
+        alertController.addAction(camera)
+        alertController.addAction(photoLib)
+        alertController.addAction(cancel)
+        
+        self.view?.showImageLoadMenu(alertController)
+    }
+    
     func editTitle(_ value: String?) {
-        guard let value = value else { return }
-        self.viewModel.place.title = value
+        switch self.crudType {
+        case .create:
+            self.viewModel.newPlaceTitle = value
+        case .update:
+            guard let value = value, let place = self.viewModel.currentPlace else { return }
+            place.title = value
+        }
     }
     
     func editDescription(_ value: String?) {
-        guard let value = value else { return }
-        self.viewModel.place.description = value
+        switch self.crudType {
+        case .create:
+            self.viewModel.newPlaceDescription = value
+        case .update:
+            guard let value = value, let place = self.viewModel.currentPlace else { return }
+            place.description = value
+        }
     }
     
     func editType(_ value: String?) {
-        guard let value = value else { return }
-        self.viewModel.place.type = value
+        switch self.crudType {
+        case .create:
+            self.viewModel.newPlaceType = value
+        case .update:
+            guard let value = value, let place = self.viewModel.currentPlace else { return }
+            place.type = value
+        }
     }
-        
+    
     // MARK: - Module functions
 }

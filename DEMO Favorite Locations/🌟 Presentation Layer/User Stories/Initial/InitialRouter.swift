@@ -29,7 +29,7 @@ class InitialRouter: ViperRouter, InitialRouterInput {
         let mapVC = MapAssembly.create()
         _ = MapAssembly.configure(with: mapVC)
         
-//        let placesNC = BasicNavigationController(rootViewController: placesVC)
+        let placesNC = BasicNavigationController(rootViewController: placesVC)
         
         let placesBarItem = UITabBarItem(title: "Places", image: UIImage(systemName: "star.fill"), selectedImage: nil)
         let mapBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "map"), selectedImage: nil)
@@ -38,7 +38,7 @@ class InitialRouter: ViperRouter, InitialRouterInput {
         mapVC.tabBarItem = mapBarItem
         
         let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([placesVC, mapVC], animated: true)
+        tabBarController.setViewControllers([placesNC, mapVC], animated: true)
         
         tabBarController.modalPresentationStyle = .fullScreen
 
