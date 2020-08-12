@@ -62,6 +62,10 @@ class DetailPlacePresenter: ViperPresenter, DetailPlacePresenterInput, DetailPla
         self.router?.dismiss(animated: true)
     }
     
+    func updateCover(_ cover: UIImage) {
+        self.viewModel.newPlaceCover = cover
+    }
+    
     func pressedAddImageButton() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         

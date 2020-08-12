@@ -22,14 +22,12 @@ class DetailPlaceViewModel: ViperViewModel {
         guard let newPlaceTitle = self.newPlaceTitle else { return nil }
         guard let newPlaceDescription = self.newPlaceDescription else { return nil }
         guard let newPlaceType = self.newPlaceType else { return nil }
-//        guard let newPlaceCover = self.newPlaceCover else { return nil }
         
-        return PlaceModel(id: 1,
-                          title: newPlaceTitle,
+        return PlaceModel(title: newPlaceTitle,
                           description: newPlaceDescription,
                           type: newPlaceType,
                           rating: 0.0,
-                          cover: UIImage())
+                          cover: newPlaceCover != nil ? newPlaceCover : UIImage())
     }
     
     // MARK: - Initialization

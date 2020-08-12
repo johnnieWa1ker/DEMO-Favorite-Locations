@@ -18,6 +18,7 @@ protocol DetailPlaceViewOutput: ViperViewOutput {
     func pressedCancelButton()
     func pressedSaveButton()
     func pressedAddImageButton()
+    func updateCover(_ cover: UIImage)
     func editTitle(_ value: String?)
     func editDescription(_ value: String?)
     func editType(_ value: String?)
@@ -204,6 +205,7 @@ extension DetailPlaceViewController: UIImagePickerControllerDelegate {
             let imgResize = UIImage.resizeImage(image: img, newHeight: 300)
             self.coverImageView.image = imgResize
             self.coverImageView.contentMode = .scaleAspectFill
+            self.output?.updateCover(imgResize)
         }
         
         dismiss(animated: true, completion: nil)

@@ -11,7 +11,6 @@ import UIKit
 public class PlaceModel {
     
     // MARK: - Props
-    var id: Int
     var title: String
     var description: String
     var type: String
@@ -20,14 +19,12 @@ public class PlaceModel {
     
     // MARK: - Initialization
     
-    init(id: Int,
-         title: String,
+    init(title: String,
          description: String,
          type: String,
          rating: Double,
          cover: UIImage?
     ) {
-        self.id = id
         self.title = title
         self.description = description
         self.type = type
