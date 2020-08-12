@@ -9,6 +9,7 @@
 import GKViper
 import GKRepresentable
 import PinLayout
+import Cosmos
 
 class PlaceCell: TableCell {
     
@@ -19,16 +20,22 @@ class PlaceCell: TableCell {
     @IBOutlet private weak var descriptionLabel: UILabel!
     
     // MARK: - Props
-
+    let cosmosView = CosmosView()
+    
     // MARK: - Setup functions
     override func setupView() {
         self.apply(.clear())
         self.containerView.apply(.roundedAllCorners(AppTheme.lightGray))
+        
+        self.cosmosView.frame(forAlignmentRect: CGRect(origin: .zero, size: CGSize(width: 250, height: 50)))
+        self.containerView.addSubview(cosmosView)
+        cosmosView.pin.topLeft(to: descriptionLabel.anchor.bottomLeft).marginVertical(16.0)
+        cosmosView.pin.width(self.containerView.frame.width / 4)
+        cosmosView.pin.height(16.0)
     }
     
     override func updateViews() {
         guard let model = self.model as? PlaceCellModel else { return }
-        
         let place = model.place
         
         self.coverImage?.image = place.cover
@@ -42,11 +49,7 @@ class PlaceCell: TableCell {
         self.descriptionLabel.text = place.description
         self.descriptionLabel.apply(.sfBodyRegular14(AppTheme.black, .left))
         
-        let starRatingView = StarRatingView(frame: CGRect(origin: .zero, size: CGSize(width: 250, height: 50)), rating: Float(place.rating), color: UIColor.systemOrange, starRounding: .roundToHalfStar)
-        self.containerView.addSubview(starRatingView)
-        starRatingView.pin.topLeft(to: descriptionLabel.anchor.bottomLeft).marginVertical(16.0)
-        starRatingView.pin.width(self.containerView.frame.width / 4)
-        starRatingView.pin.height(16.0)
+        self.cosmosView.rating = place.rating
     }
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) { }
