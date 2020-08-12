@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import CoreGraphics
 
 protocol DetailPlaceViewInput: ViperViewInput {
     func showImageLoadMenu(_ alert: UIAlertController)
@@ -22,7 +23,7 @@ protocol DetailPlaceViewOutput: ViperViewOutput {
     func editType(_ value: String?)
 }
 
-class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput, UINavigationControllerDelegate {
+class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput {
 
     // MARK: - Outlets
     @IBOutlet private weak var coverBackgroundView: UIView!
@@ -54,8 +55,7 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput, UINa
         self.navigationItem.title = ""
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        self.coverImageView.image = AppAssets.addImagePlaceholder
-        self.coverImageView.contentMode = .scaleAspectFit
+        self.coverImageView.clipsToBounds = true
         
         self.titleLabel.text = AppLocalization.Detail.titleLabel.loc
         self.descriptionLabel.text = AppLocalization.Detail.descriptionLabel.loc
@@ -102,6 +102,16 @@ class DetailPlaceViewController: ViperViewController, DetailPlaceViewInput, UINa
         super.setupInitialState(with: viewModel)
         
         guard let viewModel = viewModel as? DetailPlaceViewModel else { return }
+        
+        if let image = viewModel.currentPlace?.cover {
+            self.coverImageView.image = image
+            self.coverImageView.contentMode = .scaleAspectFill
+            self.makeFadeOnImage()
+        } else {
+            self.coverImageView.image = AppAssets.addImagePlaceholder
+            self.coverImageView.contentMode = .scaleAspectFit
+        }
+        
         self.titleTextField.text = viewModel.currentPlace?.title
         self.descriptionTextField.text = viewModel.currentPlace?.description
         self.titleTextField.text = viewModel.currentPlace?.title
@@ -157,22 +167,45 @@ extension DetailPlaceViewController {
 }
 
 // MARK: - Module functions
-extension DetailPlaceViewController { }
+extension DetailPlaceViewController {
+    
+    func makeFadeOnImage() {
+        let maskedView = UIView()
+        let maskedViewSize = CGSize(width: self.coverImageView.bounds.width,
+                                    height: self.coverImageView.bounds.height / 2)
+        maskedView.frame = CGRect(x: self.coverImageView.frame.minX,
+                                  y: self.coverImageView.frame.maxY - maskedViewSize.height,
+                                  width: maskedViewSize.width,
+                                  height: maskedViewSize.height)
+        maskedView.backgroundColor = AppTheme.black
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = maskedView.bounds
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        gradient.locations = [0, 1, 0, 0]
+        
+        maskedView.layer.mask = gradient
+        self.coverImageView.addSubview(maskedView)
+    }
+}
+
+// MARK: - UINavigationControllerDelegate
+extension DetailPlaceViewController: UINavigationControllerDelegate { }
 
 // MARK: - UIImagePickerControllerDelegate
 extension DetailPlaceViewController: UIImagePickerControllerDelegate {
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        var image: UIImage?
-        if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            image = img
-        } else if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            image = img
-        }
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[.editedImage] as? UIImage
+        
         if let img = image {
             let imgResize = UIImage.resizeImage(image: img, newHeight: 300)
             self.coverImageView.image = imgResize
+            self.coverImageView.contentMode = .scaleAspectFill
         }
+        
         dismiss(animated: true, completion: nil)
     }
 }

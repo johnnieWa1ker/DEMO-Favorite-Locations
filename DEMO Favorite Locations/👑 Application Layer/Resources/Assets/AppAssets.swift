@@ -40,8 +40,18 @@ enum AppAssets {
         return img
     }
     
+    static var iconCamera: UIImage? {
+        let img = UIImage(named: "iconCamera")
+        return img
+    }
+    
     static var iconDisconnect: UIImage? {
         let img = UIImage(named: "iconDisconnect")
+        return img
+    }
+    
+    static var iconPhotoAlbum: UIImage? {
+        let img = UIImage(named: "iconPhotoAlbum")
         return img
     }
     

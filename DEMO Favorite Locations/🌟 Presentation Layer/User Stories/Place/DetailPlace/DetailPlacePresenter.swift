@@ -66,8 +66,13 @@ class DetailPlacePresenter: ViperPresenter, DetailPlacePresenterInput, DetailPla
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let camera = UIAlertAction(title: "Use camera", style: .default) { _ in self.view?.showImagePickerController(.camera) }
-        let photoLib = UIAlertAction(title: "Choose from library", style: .default) { _ in
-            self.view?.showImagePickerController(.photoLibrary) }
+        camera.setValue(AppAssets.iconCamera, forKey: "image")
+        camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+        
+        let photoLib = UIAlertAction(title: "Choose from library", style: .default) { _ in self.view?.showImagePickerController(.photoLibrary) }
+        photoLib.setValue(AppAssets.iconPhotoAlbum, forKey: "image")
+        photoLib.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+        
         let cancel = UIAlertAction(title: AppLocalization.General.cancel.loc, style: .cancel)
         
         alertController.addAction(camera)

@@ -33,7 +33,7 @@ class BasicNavigationController: UINavigationController {
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.backgroundColor = .clear
         self.navigationBar.isUserInteractionEnabled = false
-        self.navigationBar.tintColor = AppTheme.green
+        self.navigationBar.tintColor = AppTheme.mainAccent
         self.navigationBar.titleTextAttributes = [.font: SFPRO.regular.font(size: 16), .foregroundColor: AppTheme.white]
         self.navigationBar.largeTitleTextAttributes =  [.font: SFPRO.bold.font(size: 24), .foregroundColor: AppTheme.white]
         

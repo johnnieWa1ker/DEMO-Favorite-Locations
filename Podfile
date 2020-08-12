@@ -31,5 +31,8 @@ target 'DEMO Favorite Locations' do
   
   # https://github.com/hirokimu/EMTNeumorphicView
   pod 'EMTNeumorphicView'
+  
+  # https://github.com/evgenyneu/Cosmos
+  pod 'Cosmos'
 
 end
