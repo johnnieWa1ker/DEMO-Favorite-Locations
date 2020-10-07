@@ -1,0 +1,15 @@
+${PODS_ROOT}/Target Support Files/Pods-Places/Pods-Places-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework
+${BUILT_PRODUCTS_DIR}/EMTNeumorphicView/EMTNeumorphicView.framework
+${BUILT_PRODUCTS_DIR}/GKCoreData/GKCoreData.framework
+${BUILT_PRODUCTS_DIR}/GKExtensions/GKExtensions.framework
+${BUILT_PRODUCTS_DIR}/GKNetwork/GKNetwork.framework
+${BUILT_PRODUCTS_DIR}/GKRepresentable/GKRepresentable.framework
+${BUILT_PRODUCTS_DIR}/GKUseCase/GKUseCase.framework
+${BUILT_PRODUCTS_DIR}/GKViper/GKViper.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework
+${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework
