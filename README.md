@@ -1,13 +1,13 @@
-# 📍 Favorite Location
+# 📍 Places
 [![Build Status](https://img.shields.io/badge/Swift-5.1.1-orange.svg)](https://swift.org)
 
 Demo application based on TableView and MapView.
 In it, I want to focus on using MapKit and working with the Realm database.
 The image displays the state of the application "at the moment"
   <p float="right">
-    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo1-1.imageset/demo1.png" width="32%"/>
-    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo2-2.imageset/demo2.png" width="32%"/>
-    <img src="DEMO%20Favorite%20Locations/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo3-3.imageset/demo3.png" width="32%"/>
+    <img src="Places/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo1-1.imageset/demo1.png" width="32%"/>
+    <img src="Places/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo2-2.imageset/demo2.png" width="32%"/>
+    <img src="Places/👑%20Application%20Layer/Resources/Assets/Assets.xcassets/demo/demo3-3.imageset/demo3.png" width="32%"/>
   </p>
 
 ## 🏃‍♂️ Getting Started
